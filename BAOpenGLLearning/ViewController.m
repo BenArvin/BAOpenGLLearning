@@ -8,11 +8,14 @@
 
 #import "ViewController.h"
 #import "TestTriangleView.h"
+#import "TestSquareView.h"
+#import "TestCircleView.h"
 
 @interface ViewController ()
 
 @property (nonatomic) UIButton *displayButton;
-@property (nonatomic) TestTriangleView *testTriangleView;
+@property (nonatomic) UIView *openGLView;
+@property (nonatomic) TestSquareView *testSquareView;
 
 @end
 
@@ -24,15 +27,14 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if (!_testTriangleView) {
-        [self.view addSubview:self.displayButton];
-        CGSize btnSize = CGSizeMake(50, 30);
-        self.displayButton.frame = CGRectMake(floor((self.view.bounds.size.width - btnSize.width) / 2), self.view.bounds.size.height - btnSize.height - 30, btnSize.width, btnSize.height);
-        
-        self.testTriangleView = [[TestTriangleView alloc] init];
-        [self.view addSubview:self.testTriangleView];
-        self.testTriangleView.frame = CGRectMake(10, 10, self.view.bounds.size.width - 20, CGRectGetMinY(self.displayButton.frame) - 10 - 20);
-    }
+    [self.view addSubview:self.displayButton];
+    CGSize btnSize = CGSizeMake(50, 30);
+    self.displayButton.frame = CGRectMake(floor((self.view.bounds.size.width - btnSize.width) / 2), self.view.bounds.size.height - btnSize.height - 30, btnSize.width, btnSize.height);
+    
+    [self.view addSubview:self.openGLView];
+    self.openGLView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.openGLView.layer.borderWidth = 1;
+    self.openGLView.frame = CGRectMake(10, CGRectGetMaxY(self.navigationController.navigationBar.frame) + 10, self.view.bounds.size.width - 20, CGRectGetMinY(self.displayButton.frame) - 10 - 20 - CGRectGetMaxY(self.navigationController.navigationBar.frame));
 }
 
 - (UIButton *)displayButton {
@@ -46,8 +48,17 @@
     return _displayButton;
 }
 
+- (UIView *)openGLView {
+    if (!_openGLView) {
+//        _openGLView = [[TestTriangleView alloc] init];
+//        _openGLView = [[TestSquareView alloc] init];
+        _openGLView = [[TestCircleView alloc] init];
+    }
+    return _openGLView;
+}
+
 - (void)btnAction:(UIButton *)sender {
-    [self.testTriangleView display];
+    [self.openGLView performSelector:@selector(display)];
 }
 
 @end

@@ -1,28 +1,28 @@
 //
-//  TestTriangleView.m
-//  BAGPUImage
+//  TestCircleView.m
+//  BAOpenGLLearning
 //
-//  Created by BenArvin on 2019/8/12.
+//  Created by BenArvin on 2019/8/16.
 //  Copyright © 2019 BenArvin. All rights reserved.
 //
 
-#import "TestTriangleView.h"
+#import "TestCircleView.h"
 #import <OpenGLES/ES3/gl.h>
 
-NSString *const vertexShaderSource = SHADER_STRING
+NSString *const vertexShaderSourceForCircleView = SHADER_STRING
 (
  attribute vec3 aPos;
  void main() {
      gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);
  });
 
-NSString *const fragmentShaderSource = SHADER_STRING
+NSString *const fragmentShaderSourceForCircleView = SHADER_STRING
 (
  void main() {
      gl_FragColor = vec4(1.0, 0.5, 0.2, 1.0);
  });
 
-@interface TestTriangleView() {
+@interface TestCircleView() {
 }
 
 @property (nonatomic) CAEAGLLayer *openGLLayer;
@@ -32,10 +32,9 @@ NSString *const fragmentShaderSource = SHADER_STRING
 
 @end
 
-@implementation TestTriangleView
+@implementation TestCircleView
 
 + (Class)layerClass {
-    //设置layer类型
     return [CAEAGLLayer class];
 }
 
@@ -45,21 +44,17 @@ NSString *const fragmentShaderSource = SHADER_STRING
     _openGLLayer.drawableProperties = @{kEAGLDrawablePropertyRetainedBacking: @(YES), kEAGLDrawablePropertyColorFormat: kEAGLColorFormatRGBA8};
     _openGLLayer.contentsScale = 1.0;
     
-    //设置context
     _openGLContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3];
     [EAGLContext setCurrentContext:_openGLContext];
     
-    //清除缓存
     glDeleteBuffers(1, &_renderBuffer);
     _renderBuffer = 0;
     glDeleteBuffers(1, &_frameBuffer);
     _frameBuffer = 0;
     
-    //render buffer
     glGenRenderbuffers(1, &_renderBuffer);
     glBindRenderbuffer(GL_RENDERBUFFER, _renderBuffer);
     
-    //frame buffer
     glGenFramebuffers(1, &_frameBuffer);
     glBindFramebuffer(GL_FRAMEBUFFER, _frameBuffer);
     
@@ -68,7 +63,7 @@ NSString *const fragmentShaderSource = SHADER_STRING
     [_openGLContext renderbufferStorage:GL_RENDERBUFFER fromDrawable:_openGLLayer];
     
     GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
-    const GLchar *vertexShaderSourceChar = (GLchar *)[vertexShaderSource UTF8String];
+    const GLchar *vertexShaderSourceChar = (GLchar *)[vertexShaderSourceForCircleView UTF8String];
     glShaderSource(vertexShader, 1, &vertexShaderSourceChar, NULL);
     glCompileShader(vertexShader);
     int success;
@@ -80,7 +75,7 @@ NSString *const fragmentShaderSource = SHADER_STRING
     }
     
     GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-    const GLchar *fragmentShaderSourceChar = (GLchar *)[fragmentShaderSource UTF8String];
+    const GLchar *fragmentShaderSourceChar = (GLchar *)[fragmentShaderSourceForCircleView UTF8String];
     glShaderSource(fragmentShader, 1, &fragmentShaderSourceChar, NULL);
     glCompileShader(fragmentShader);
     int success2;
@@ -102,17 +97,27 @@ NSString *const fragmentShaderSource = SHADER_STRING
         glGetProgramInfoLog(program, 512, NULL, infoLog3);
         return;
     }
+    
     glDeleteShader(fragmentShader);
     glDeleteShader(vertexShader);
     
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
     
-    float vertices[] = {
-        -1.0f, -1.0f, 0.0f, // left
-        1.0f, -1.0f, 0.0f, // right
-        -1.0f,  1.0f, 0.0f  // top
-    };
+    int piecesCount = 100000;
+    float vertices[piecesCount * 3];
+    float delta = 2.0 * M_PI / piecesCount;
+    float radiusH = 0.8;
+    float radiusV = 0.8 * (self.bounds.size.width / self.bounds.size.height);
+    for (int i = 0; i<piecesCount; i++) {
+        GLfloat x = radiusH * cos(delta * i);
+        GLfloat y = radiusV * sin(delta * i);
+        GLfloat z = 0.0;
+        vertices[i * 3 + 0] = x;
+        vertices[i * 3 + 1] = y;
+        vertices[i * 3 + 2] = z;
+    }
+    
     unsigned int VAO, VBO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
@@ -122,7 +127,7 @@ NSString *const fragmentShaderSource = SHADER_STRING
     
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3*sizeof(float), (void *)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
     
     glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -134,7 +139,7 @@ NSString *const fragmentShaderSource = SHADER_STRING
     
     glUseProgram(program);
     glBindVertexArray(VAO);
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+    glDrawArrays(GL_TRIANGLE_FAN, 0, piecesCount);
     
     if ([EAGLContext currentContext] != _openGLContext) {
         [EAGLContext setCurrentContext:_openGLContext];

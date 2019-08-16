@@ -14,6 +14,9 @@
 		E4C8741A2302EDA200AA4952 /* BAOpenGLLearningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C874192302EDA200AA4952 /* BAOpenGLLearningTests.m */; };
 		E4C874252302EDA200AA4952 /* BAOpenGLLearningUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C874242302EDA200AA4952 /* BAOpenGLLearningUITests.m */; };
 		E4C874342302EE6A00AA4952 /* TestTriangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C874332302EE6A00AA4952 /* TestTriangleView.m */; };
+		E4C874362302F01700AA4952 /* 一、基础三角形.md in Resources */ = {isa = PBXBuildFile; fileRef = E4C874352302F01700AA4952 /* 一、基础三角形.md */; };
+		E4C8743A2304F9A600AA4952 /* TestSquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C874392304F9A600AA4952 /* TestSquareView.m */; };
+		E4C8745E23064E7800AA4952 /* TestCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C8745D23064E7800AA4952 /* TestCircleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,12 @@
 		E4C874262302EDA200AA4952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4C874322302EE6A00AA4952 /* TestTriangleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTriangleView.h; sourceTree = "<group>"; };
 		E4C874332302EE6A00AA4952 /* TestTriangleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTriangleView.m; sourceTree = "<group>"; };
+		E4C874352302F01700AA4952 /* 一、基础三角形.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "一、基础三角形.md"; sourceTree = "<group>"; };
+		E4C874382304F9A600AA4952 /* TestSquareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSquareView.h; sourceTree = "<group>"; };
+		E4C874392304F9A600AA4952 /* TestSquareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSquareView.m; sourceTree = "<group>"; };
+		E4C8743B2305004A00AA4952 /* Info.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Info.pch; sourceTree = "<group>"; };
+		E4C8745C23064E7800AA4952 /* TestCircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCircleView.h; sourceTree = "<group>"; };
+		E4C8745D23064E7800AA4952 /* TestCircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCircleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +89,7 @@
 		E4C873F42302EDA000AA4952 = {
 			isa = PBXGroup;
 			children = (
+				E4C874372302F5DD00AA4952 /* files */,
 				E4C873FF2302EDA000AA4952 /* BAOpenGLLearning */,
 				E4C874182302EDA200AA4952 /* BAOpenGLLearningTests */,
 				E4C874232302EDA200AA4952 /* BAOpenGLLearningUITests */,
@@ -106,6 +116,11 @@
 				E4C874042302EDA000AA4952 /* ViewController.m */,
 				E4C874322302EE6A00AA4952 /* TestTriangleView.h */,
 				E4C874332302EE6A00AA4952 /* TestTriangleView.m */,
+				E4C874382304F9A600AA4952 /* TestSquareView.h */,
+				E4C874392304F9A600AA4952 /* TestSquareView.m */,
+				E4C8745C23064E7800AA4952 /* TestCircleView.h */,
+				E4C8745D23064E7800AA4952 /* TestCircleView.m */,
+				E4C8743B2305004A00AA4952 /* Info.pch */,
 				E4C874092302EDA200AA4952 /* Assets.xcassets */,
 				E4C8740E2302EDA200AA4952 /* Info.plist */,
 				E4C8740F2302EDA200AA4952 /* main.m */,
@@ -129,6 +144,14 @@
 				E4C874262302EDA200AA4952 /* Info.plist */,
 			);
 			path = BAOpenGLLearningUITests;
+			sourceTree = "<group>";
+		};
+		E4C874372302F5DD00AA4952 /* files */ = {
+			isa = PBXGroup;
+			children = (
+				E4C874352302F01700AA4952 /* 一、基础三角形.md */,
+			);
+			path = files;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4C8740A2302EDA200AA4952 /* Assets.xcassets in Resources */,
+				E4C874362302F01700AA4952 /* 一、基础三角形.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,10 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C8745E23064E7800AA4952 /* TestCircleView.m in Sources */,
 				E4C874052302EDA000AA4952 /* ViewController.m in Sources */,
 				E4C874102302EDA200AA4952 /* main.m in Sources */,
 				E4C874342302EE6A00AA4952 /* TestTriangleView.m in Sources */,
 				E4C874022302EDA000AA4952 /* AppDelegate.m in Sources */,
+				E4C8743A2304F9A600AA4952 /* TestSquareView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8T284JCWV7;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Info.pch";
 				INFOPLIST_FILE = BAOpenGLLearning/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -434,6 +461,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8T284JCWV7;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Info.pch";
 				INFOPLIST_FILE = BAOpenGLLearning/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
