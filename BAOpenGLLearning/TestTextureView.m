@@ -105,6 +105,13 @@
         -1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f,// left bottom
          1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f,// right bottom
     };
+// 不设置颜色
+//    float vertices[] = {
+//        -1.0f,  1.0f, 0.0f, 0.0f, 0.0f,// left top
+//         1.0f,  1.0f, 0.0f, 1.0f, 0.0f,// right top
+//        -1.0f, -1.0f, 0.0f, 0.0f, 1.0f,// left bottom
+//         1.0f, -1.0f, 0.0f, 1.0f, 1.0f,// right bottom
+//    };
     unsigned int indices[] = {
         0, 1, 2,
         1, 2, 3,
@@ -127,6 +134,10 @@
     glEnableVertexAttribArray(1);
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
     glEnableVertexAttribArray(2);
+//    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
+//    glEnableVertexAttribArray(0);
+//    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
+//    glEnableVertexAttribArray(1);
     
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
