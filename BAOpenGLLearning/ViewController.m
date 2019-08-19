@@ -10,6 +10,8 @@
 #import "TestTriangleView.h"
 #import "TestSquareView.h"
 #import "TestCircleView.h"
+#import "TestColorfulSquareView.h"
+#import "TestTextureView.h"
 
 @interface ViewController ()
 
@@ -50,9 +52,7 @@
 
 - (UIView *)openGLView {
     if (!_openGLView) {
-//        _openGLView = [[TestTriangleView alloc] init];
-//        _openGLView = [[TestSquareView alloc] init];
-        _openGLView = [[TestCircleView alloc] init];
+        _openGLView = [[TestTextureView alloc] init];
     }
     return _openGLView;
 }

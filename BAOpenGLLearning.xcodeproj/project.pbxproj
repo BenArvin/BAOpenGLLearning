@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4A0BDEE230A38090013D628 /* TestColorfulSquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A0BDED230A38090013D628 /* TestColorfulSquareView.m */; };
+		E4A0BDF1230A8A470013D628 /* TestColorfulSquareVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E4A0BDF0230A8A470013D628 /* TestColorfulSquareVertex.glsl */; };
+		E4A0BDF3230A8A7D0013D628 /* TestColorfulSquareFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E4A0BDF2230A8A7D0013D628 /* TestColorfulSquareFragment.glsl */; };
+		E4A0BDF6230A955C0013D628 /* TestTextureView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A0BDF5230A955C0013D628 /* TestTextureView.m */; };
+		E4A0BDF9230A95D80013D628 /* TestTextureFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E4A0BDF7230A95D80013D628 /* TestTextureFragment.glsl */; };
+		E4A0BDFA230A95D80013D628 /* TestTextureVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E4A0BDF8230A95D80013D628 /* TestTextureVertex.glsl */; };
 		E4C874022302EDA000AA4952 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C874012302EDA000AA4952 /* AppDelegate.m */; };
 		E4C874052302EDA000AA4952 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C874042302EDA000AA4952 /* ViewController.m */; };
 		E4C8740A2302EDA200AA4952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C874092302EDA200AA4952 /* Assets.xcassets */; };
@@ -37,6 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E4A0BDEC230A38090013D628 /* TestColorfulSquareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestColorfulSquareView.h; sourceTree = "<group>"; };
+		E4A0BDED230A38090013D628 /* TestColorfulSquareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestColorfulSquareView.m; sourceTree = "<group>"; };
+		E4A0BDF0230A8A470013D628 /* TestColorfulSquareVertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestColorfulSquareVertex.glsl; sourceTree = "<group>"; };
+		E4A0BDF2230A8A7D0013D628 /* TestColorfulSquareFragment.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestColorfulSquareFragment.glsl; sourceTree = "<group>"; };
+		E4A0BDF4230A955C0013D628 /* TestTextureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTextureView.h; sourceTree = "<group>"; };
+		E4A0BDF5230A955C0013D628 /* TestTextureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTextureView.m; sourceTree = "<group>"; };
+		E4A0BDF7230A95D80013D628 /* TestTextureFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestTextureFragment.glsl; sourceTree = "<group>"; };
+		E4A0BDF8230A95D80013D628 /* TestTextureVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestTextureVertex.glsl; sourceTree = "<group>"; };
 		E4C873FD2302EDA000AA4952 /* BAOpenGLLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAOpenGLLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C874002302EDA000AA4952 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E4C874012302EDA000AA4952 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -116,10 +130,18 @@
 				E4C874042302EDA000AA4952 /* ViewController.m */,
 				E4C874322302EE6A00AA4952 /* TestTriangleView.h */,
 				E4C874332302EE6A00AA4952 /* TestTriangleView.m */,
+				E4A0BDEC230A38090013D628 /* TestColorfulSquareView.h */,
+				E4A0BDED230A38090013D628 /* TestColorfulSquareView.m */,
+				E4A0BDF0230A8A470013D628 /* TestColorfulSquareVertex.glsl */,
+				E4A0BDF2230A8A7D0013D628 /* TestColorfulSquareFragment.glsl */,
 				E4C874382304F9A600AA4952 /* TestSquareView.h */,
 				E4C874392304F9A600AA4952 /* TestSquareView.m */,
 				E4C8745C23064E7800AA4952 /* TestCircleView.h */,
 				E4C8745D23064E7800AA4952 /* TestCircleView.m */,
+				E4A0BDF4230A955C0013D628 /* TestTextureView.h */,
+				E4A0BDF5230A955C0013D628 /* TestTextureView.m */,
+				E4A0BDF8230A95D80013D628 /* TestTextureVertex.glsl */,
+				E4A0BDF7230A95D80013D628 /* TestTextureFragment.glsl */,
 				E4C8743B2305004A00AA4952 /* Info.pch */,
 				E4C874092302EDA200AA4952 /* Assets.xcassets */,
 				E4C8740E2302EDA200AA4952 /* Info.plist */,
@@ -258,7 +280,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4C8740A2302EDA200AA4952 /* Assets.xcassets in Resources */,
+				E4A0BDF3230A8A7D0013D628 /* TestColorfulSquareFragment.glsl in Resources */,
 				E4C874362302F01700AA4952 /* 一、基础三角形.md in Resources */,
+				E4A0BDF1230A8A470013D628 /* TestColorfulSquareVertex.glsl in Resources */,
+				E4A0BDF9230A95D80013D628 /* TestTextureFragment.glsl in Resources */,
+				E4A0BDFA230A95D80013D628 /* TestTextureVertex.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +309,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4A0BDF6230A955C0013D628 /* TestTextureView.m in Sources */,
+				E4A0BDEE230A38090013D628 /* TestColorfulSquareView.m in Sources */,
 				E4C8745E23064E7800AA4952 /* TestCircleView.m in Sources */,
 				E4C874052302EDA000AA4952 /* ViewController.m in Sources */,
 				E4C874102302EDA200AA4952 /* main.m in Sources */,
