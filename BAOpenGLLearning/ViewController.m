@@ -7,17 +7,15 @@
 //
 
 #import "ViewController.h"
-#import "TestTriangleView.h"
-#import "TestSquareView.h"
-#import "TestCircleView.h"
-#import "TestColorfulSquareView.h"
-#import "TestTextureView.h"
+#import "OpenGLTestVC.h"
+#import "GPUImageTestVC.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic) UITableView *tableView;
+@property (nonatomic) NSArray *datas;
 @property (nonatomic) UIButton *displayButton;
 @property (nonatomic) UIView *openGLView;
-@property (nonatomic) TestSquareView *testSquareView;
 
 @end
 
@@ -25,40 +23,58 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.datas = @[@"OpenGL ES test", @"GPUImage test"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.view addSubview:self.displayButton];
-    CGSize btnSize = CGSizeMake(50, 30);
-    self.displayButton.frame = CGRectMake(floor((self.view.bounds.size.width - btnSize.width) / 2), self.view.bounds.size.height - btnSize.height - 30, btnSize.width, btnSize.height);
     
-    [self.view addSubview:self.openGLView];
-    self.openGLView.layer.borderColor = [UIColor blackColor].CGColor;
-    self.openGLView.layer.borderWidth = 1;
-    self.openGLView.frame = CGRectMake(10, CGRectGetMaxY(self.navigationController.navigationBar.frame) + 10, self.view.bounds.size.width - 20, CGRectGetMinY(self.displayButton.frame) - 10 - 20 - CGRectGetMaxY(self.navigationController.navigationBar.frame));
-}
-
-- (UIButton *)displayButton {
-    if (!_displayButton) {
-        _displayButton = [[UIButton alloc] init];
-        [_displayButton addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
-        _displayButton.backgroundColor = [UIColor lightGrayColor];
-        [_displayButton setTitle:@"显示" forState:UIControlStateNormal];
-        _displayButton.titleLabel.font = [UIFont systemFontOfSize:14];
+    if (!_tableView) {
+        [self.view addSubview:self.tableView];
+        self.tableView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     }
-    return _displayButton;
 }
 
-- (UIView *)openGLView {
-    if (!_openGLView) {
-        _openGLView = [[TestTextureView alloc] init];
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] init];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
     }
-    return _openGLView;
+    return _tableView;
 }
 
-- (void)btnAction:(UIButton *)sender {
-    [self.openGLView performSelector:@selector(display)];
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0) {
+        UIViewController *vc = [[OpenGLTestVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.row == 1) {
+        UIViewController *vc = [[GPUImageTestVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.datas.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([UITableViewCell class])];
+    }
+    cell.textLabel.text = [self.datas objectAtIndex:indexPath.row];
+    return cell;
 }
 
 @end

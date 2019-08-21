@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E485A704230CEB72009DD787 /* SimpleGPUImgProcesser.m in Sources */ = {isa = PBXBuildFile; fileRef = E485A703230CEB72009DD787 /* SimpleGPUImgProcesser.m */; };
+		E485A71E230CEC88009DD787 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E485A71D230CEC88009DD787 /* CoreMedia.framework */; };
+		E485A720230CEC90009DD787 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E485A71F230CEC90009DD787 /* CoreVideo.framework */; };
+		E485A722230CEC98009DD787 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E485A721230CEC98009DD787 /* OpenGLES.framework */; };
+		E485A724230CECA5009DD787 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E485A723230CECA5009DD787 /* QuartzCore.framework */; };
+		E485A726230CECA9009DD787 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E485A725230CECA9009DD787 /* AVFoundation.framework */; };
+		E485A728230CED1F009DD787 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E485A718230CEC24009DD787 /* libGPUImage.a */; };
+		E485A739230D29E8009DD787 /* OpenGLTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E485A738230D29E8009DD787 /* OpenGLTestVC.m */; };
+		E485A73C230D29FE009DD787 /* GPUImageTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E485A73B230D29FE009DD787 /* GPUImageTestVC.m */; };
+		E485A741230D3148009DD787 /* BAGPUImageStickerFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = E485A740230D3148009DD787 /* BAGPUImageStickerFilter.m */; };
 		E4A0BDEE230A38090013D628 /* TestColorfulSquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A0BDED230A38090013D628 /* TestColorfulSquareView.m */; };
 		E4A0BDF1230A8A470013D628 /* TestColorfulSquareVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E4A0BDF0230A8A470013D628 /* TestColorfulSquareVertex.glsl */; };
 		E4A0BDF3230A8A7D0013D628 /* TestColorfulSquareFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E4A0BDF2230A8A7D0013D628 /* TestColorfulSquareFragment.glsl */; };
 		E4A0BDF6230A955C0013D628 /* TestTextureView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A0BDF5230A955C0013D628 /* TestTextureView.m */; };
 		E4A0BDF9230A95D80013D628 /* TestTextureFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E4A0BDF7230A95D80013D628 /* TestTextureFragment.glsl */; };
 		E4A0BDFA230A95D80013D628 /* TestTextureVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E4A0BDF8230A95D80013D628 /* TestTextureVertex.glsl */; };
+		E4A0BE0B230BC9410013D628 /* ImgComparator.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A0BE0A230BC9410013D628 /* ImgComparator.m */; };
+		E4A0BE0D230CE90D0013D628 /* GPUImageFilter分析.md in Resources */ = {isa = PBXBuildFile; fileRef = E4A0BE0C230CE90D0013D628 /* GPUImageFilter分析.md */; };
 		E4C874022302EDA000AA4952 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C874012302EDA000AA4952 /* AppDelegate.m */; };
 		E4C874052302EDA000AA4952 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C874042302EDA000AA4952 /* ViewController.m */; };
 		E4C8740A2302EDA200AA4952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C874092302EDA200AA4952 /* Assets.xcassets */; };
@@ -26,6 +38,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E485A717230CEC24009DD787 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E485A711230CEC24009DD787 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
+		E485A719230CEC24009DD787 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E485A711230CEC24009DD787 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCE209E51943F20C002FEED8;
+			remoteInfo = GPUImageFramework;
+		};
+		E485A71B230CEC59009DD787 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E485A711230CEC24009DD787 /* GPUImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCF1A33314DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
 		E4C874162302EDA200AA4952 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E4C873F52302EDA000AA4952 /* Project object */;
@@ -43,6 +76,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E485A702230CEB72009DD787 /* SimpleGPUImgProcesser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleGPUImgProcesser.h; sourceTree = "<group>"; };
+		E485A703230CEB72009DD787 /* SimpleGPUImgProcesser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleGPUImgProcesser.m; sourceTree = "<group>"; };
+		E485A711230CEC24009DD787 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GPUImage.xcodeproj; sourceTree = "<group>"; };
+		E485A71D230CEC88009DD787 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		E485A71F230CEC90009DD787 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		E485A721230CEC98009DD787 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		E485A723230CECA5009DD787 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E485A725230CECA9009DD787 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E485A737230D29E8009DD787 /* OpenGLTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLTestVC.h; sourceTree = "<group>"; };
+		E485A738230D29E8009DD787 /* OpenGLTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLTestVC.m; sourceTree = "<group>"; };
+		E485A73A230D29FE009DD787 /* GPUImageTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageTestVC.h; sourceTree = "<group>"; };
+		E485A73B230D29FE009DD787 /* GPUImageTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageTestVC.m; sourceTree = "<group>"; };
+		E485A73F230D3148009DD787 /* BAGPUImageStickerFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAGPUImageStickerFilter.h; sourceTree = "<group>"; };
+		E485A740230D3148009DD787 /* BAGPUImageStickerFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAGPUImageStickerFilter.m; sourceTree = "<group>"; };
 		E4A0BDEC230A38090013D628 /* TestColorfulSquareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestColorfulSquareView.h; sourceTree = "<group>"; };
 		E4A0BDED230A38090013D628 /* TestColorfulSquareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestColorfulSquareView.m; sourceTree = "<group>"; };
 		E4A0BDF0230A8A470013D628 /* TestColorfulSquareVertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestColorfulSquareVertex.glsl; sourceTree = "<group>"; };
@@ -51,6 +98,9 @@
 		E4A0BDF5230A955C0013D628 /* TestTextureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTextureView.m; sourceTree = "<group>"; };
 		E4A0BDF7230A95D80013D628 /* TestTextureFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestTextureFragment.glsl; sourceTree = "<group>"; };
 		E4A0BDF8230A95D80013D628 /* TestTextureVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestTextureVertex.glsl; sourceTree = "<group>"; };
+		E4A0BE09230BC9410013D628 /* ImgComparator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImgComparator.h; sourceTree = "<group>"; };
+		E4A0BE0A230BC9410013D628 /* ImgComparator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImgComparator.m; sourceTree = "<group>"; };
+		E4A0BE0C230CE90D0013D628 /* GPUImageFilter分析.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "GPUImageFilter分析.md"; sourceTree = "<group>"; };
 		E4C873FD2302EDA000AA4952 /* BAOpenGLLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAOpenGLLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C874002302EDA000AA4952 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E4C874012302EDA000AA4952 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +130,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E485A728230CED1F009DD787 /* libGPUImage.a in Frameworks */,
+				E485A726230CECA9009DD787 /* AVFoundation.framework in Frameworks */,
+				E485A724230CECA5009DD787 /* QuartzCore.framework in Frameworks */,
+				E485A722230CEC98009DD787 /* OpenGLES.framework in Frameworks */,
+				E485A720230CEC90009DD787 /* CoreVideo.framework in Frameworks */,
+				E485A71E230CEC88009DD787 /* CoreMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +156,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E485A706230CEBE7009DD787 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E485A725230CECA9009DD787 /* AVFoundation.framework */,
+				E485A723230CECA5009DD787 /* QuartzCore.framework */,
+				E485A721230CEC98009DD787 /* OpenGLES.framework */,
+				E485A71F230CEC90009DD787 /* CoreVideo.framework */,
+				E485A71D230CEC88009DD787 /* CoreMedia.framework */,
+				E485A711230CEC24009DD787 /* GPUImage.xcodeproj */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		E485A712230CEC24009DD787 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E485A718230CEC24009DD787 /* libGPUImage.a */,
+				E485A71A230CEC24009DD787 /* GPUImage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E485A73D230D2CC1009DD787 /* OpenGLESClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E4C874322302EE6A00AA4952 /* TestTriangleView.h */,
+				E4C874332302EE6A00AA4952 /* TestTriangleView.m */,
+				E4A0BDEC230A38090013D628 /* TestColorfulSquareView.h */,
+				E4A0BDED230A38090013D628 /* TestColorfulSquareView.m */,
+				E4A0BDF0230A8A470013D628 /* TestColorfulSquareVertex.glsl */,
+				E4A0BDF2230A8A7D0013D628 /* TestColorfulSquareFragment.glsl */,
+				E4C874382304F9A600AA4952 /* TestSquareView.h */,
+				E4C874392304F9A600AA4952 /* TestSquareView.m */,
+				E4C8745C23064E7800AA4952 /* TestCircleView.h */,
+				E4C8745D23064E7800AA4952 /* TestCircleView.m */,
+				E4A0BDF4230A955C0013D628 /* TestTextureView.h */,
+				E4A0BDF5230A955C0013D628 /* TestTextureView.m */,
+				E4A0BDF8230A95D80013D628 /* TestTextureVertex.glsl */,
+				E4A0BDF7230A95D80013D628 /* TestTextureFragment.glsl */,
+			);
+			path = OpenGLESClasses;
+			sourceTree = "<group>";
+		};
+		E485A73E230D2CE2009DD787 /* GPUImageClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E485A702230CEB72009DD787 /* SimpleGPUImgProcesser.h */,
+				E485A703230CEB72009DD787 /* SimpleGPUImgProcesser.m */,
+				E485A73F230D3148009DD787 /* BAGPUImageStickerFilter.h */,
+				E485A740230D3148009DD787 /* BAGPUImageStickerFilter.m */,
+			);
+			path = GPUImageClasses;
+			sourceTree = "<group>";
+		};
 		E4C873F42302EDA000AA4952 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +217,7 @@
 				E4C873FF2302EDA000AA4952 /* BAOpenGLLearning */,
 				E4C874182302EDA200AA4952 /* BAOpenGLLearningTests */,
 				E4C874232302EDA200AA4952 /* BAOpenGLLearningUITests */,
+				E485A706230CEBE7009DD787 /* Frameworks */,
 				E4C873FE2302EDA000AA4952 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,20 +239,14 @@
 				E4C874012302EDA000AA4952 /* AppDelegate.m */,
 				E4C874032302EDA000AA4952 /* ViewController.h */,
 				E4C874042302EDA000AA4952 /* ViewController.m */,
-				E4C874322302EE6A00AA4952 /* TestTriangleView.h */,
-				E4C874332302EE6A00AA4952 /* TestTriangleView.m */,
-				E4A0BDEC230A38090013D628 /* TestColorfulSquareView.h */,
-				E4A0BDED230A38090013D628 /* TestColorfulSquareView.m */,
-				E4A0BDF0230A8A470013D628 /* TestColorfulSquareVertex.glsl */,
-				E4A0BDF2230A8A7D0013D628 /* TestColorfulSquareFragment.glsl */,
-				E4C874382304F9A600AA4952 /* TestSquareView.h */,
-				E4C874392304F9A600AA4952 /* TestSquareView.m */,
-				E4C8745C23064E7800AA4952 /* TestCircleView.h */,
-				E4C8745D23064E7800AA4952 /* TestCircleView.m */,
-				E4A0BDF4230A955C0013D628 /* TestTextureView.h */,
-				E4A0BDF5230A955C0013D628 /* TestTextureView.m */,
-				E4A0BDF8230A95D80013D628 /* TestTextureVertex.glsl */,
-				E4A0BDF7230A95D80013D628 /* TestTextureFragment.glsl */,
+				E485A737230D29E8009DD787 /* OpenGLTestVC.h */,
+				E485A738230D29E8009DD787 /* OpenGLTestVC.m */,
+				E485A73A230D29FE009DD787 /* GPUImageTestVC.h */,
+				E485A73B230D29FE009DD787 /* GPUImageTestVC.m */,
+				E485A73D230D2CC1009DD787 /* OpenGLESClasses */,
+				E485A73E230D2CE2009DD787 /* GPUImageClasses */,
+				E4A0BE09230BC9410013D628 /* ImgComparator.h */,
+				E4A0BE0A230BC9410013D628 /* ImgComparator.m */,
 				E4C8743B2305004A00AA4952 /* Info.pch */,
 				E4C874092302EDA200AA4952 /* Assets.xcassets */,
 				E4C8740E2302EDA200AA4952 /* Info.plist */,
@@ -172,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				E4C874352302F01700AA4952 /* 一、基础三角形.md */,
+				E4A0BE0C230CE90D0013D628 /* GPUImageFilter分析.md */,
 			);
 			path = files;
 			sourceTree = "<group>";
@@ -190,6 +296,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E485A71C230CEC59009DD787 /* PBXTargetDependency */,
 			);
 			name = BAOpenGLLearning;
 			productName = BAOpenGLLearning;
@@ -265,6 +372,12 @@
 			mainGroup = E4C873F42302EDA000AA4952;
 			productRefGroup = E4C873FE2302EDA000AA4952 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E485A712230CEC24009DD787 /* Products */;
+					ProjectRef = E485A711230CEC24009DD787 /* GPUImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E4C873FC2302EDA000AA4952 /* BAOpenGLLearning */,
@@ -273,6 +386,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E485A718230CEC24009DD787 /* libGPUImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGPUImage.a;
+			remoteRef = E485A717230CEC24009DD787 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E485A71A230CEC24009DD787 /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = E485A719230CEC24009DD787 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E4C873FB2302EDA000AA4952 /* Resources */ = {
@@ -283,6 +413,7 @@
 				E4A0BDF3230A8A7D0013D628 /* TestColorfulSquareFragment.glsl in Resources */,
 				E4C874362302F01700AA4952 /* 一、基础三角形.md in Resources */,
 				E4A0BDF1230A8A470013D628 /* TestColorfulSquareVertex.glsl in Resources */,
+				E4A0BE0D230CE90D0013D628 /* GPUImageFilter分析.md in Resources */,
 				E4A0BDF9230A95D80013D628 /* TestTextureFragment.glsl in Resources */,
 				E4A0BDFA230A95D80013D628 /* TestTextureVertex.glsl in Resources */,
 			);
@@ -309,14 +440,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E485A704230CEB72009DD787 /* SimpleGPUImgProcesser.m in Sources */,
 				E4A0BDF6230A955C0013D628 /* TestTextureView.m in Sources */,
 				E4A0BDEE230A38090013D628 /* TestColorfulSquareView.m in Sources */,
+				E485A739230D29E8009DD787 /* OpenGLTestVC.m in Sources */,
 				E4C8745E23064E7800AA4952 /* TestCircleView.m in Sources */,
 				E4C874052302EDA000AA4952 /* ViewController.m in Sources */,
+				E485A741230D3148009DD787 /* BAGPUImageStickerFilter.m in Sources */,
 				E4C874102302EDA200AA4952 /* main.m in Sources */,
+				E485A73C230D29FE009DD787 /* GPUImageTestVC.m in Sources */,
 				E4C874342302EE6A00AA4952 /* TestTriangleView.m in Sources */,
 				E4C874022302EDA000AA4952 /* AppDelegate.m in Sources */,
 				E4C8743A2304F9A600AA4952 /* TestSquareView.m in Sources */,
+				E4A0BE0B230BC9410013D628 /* ImgComparator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +475,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E485A71C230CEC59009DD787 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImage;
+			targetProxy = E485A71B230CEC59009DD787 /* PBXContainerItemProxy */;
+		};
 		E4C874172302EDA200AA4952 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E4C873FC2302EDA000AA4952 /* BAOpenGLLearning */;
@@ -471,6 +612,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8T284JCWV7;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Info.pch";
+				HEADER_SEARCH_PATHS = "./Frameworks/**";
 				INFOPLIST_FILE = BAOpenGLLearning/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -490,6 +632,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8T284JCWV7;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Info.pch";
+				HEADER_SEARCH_PATHS = "./Frameworks/**";
 				INFOPLIST_FILE = BAOpenGLLearning/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
