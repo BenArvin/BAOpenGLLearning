@@ -8,6 +8,7 @@
 
 #import "GPUImageTestVC.h"
 #import "SimpleGPUImgProcesser.h"
+#import "BAGPUImageStickerFilter.h"
 
 @interface GPUImageTestVC ()
 
@@ -23,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.originalImage = [UIImage imageNamed:@"testImage"];
+    self.originalImage = [UIImage imageNamed:@"dog_1"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -82,8 +83,8 @@
         self.imageView.image = self.originalImage;
     } else if (sender == self.processedButton) {
 //        GPUImageGaussianBlurFilter *filter = [[GPUImageGaussianBlurFilter alloc] init];
-//        GPUImageFilter *filter = [[GPUImageColorInvertFilter alloc] init];
         GPUImageFilter *filter = [[GPUImageColorInvertFilter alloc] init];
+//        GPUImageFilter *filter = [[BAGPUImageStickerFilter alloc] init];
         self.imageView.image = [SimpleGPUImgProcesser processImage:self.originalImage filters:@[filter]];
     }
 }

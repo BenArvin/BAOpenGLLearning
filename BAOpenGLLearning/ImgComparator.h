@@ -10,6 +10,14 @@
 
 @interface ImgComparator : NSObject
 
-+ (BOOL)compareImages:(UIImage *)image1 image2:(UIImage *)image2 diffPoints:(NSArray **)diffPoints error:(NSError **)error;
++ (NSArray *)compareImage:(UIImage *)image1
+                   image2:(UIImage *)image2
+                    error:(NSError **)error;
+
++ (NSArray *)comparePixels:(CGImageRef)image1
+                    react1:(CGRect)react1
+                    image2:(CGImageRef)image2
+                    react2:(CGRect)react2
+                     error:(NSError **)error;
 
 @end
